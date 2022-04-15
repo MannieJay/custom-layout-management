@@ -14,9 +14,94 @@
 }
 
 .background-designator-header {
-  background-color: #5c626d;
+  background-color: #4b4b4bb6;
+  color: white;
+  padding: 10px;
+}
+
+.background-designator-icon {
+  padding-right: 10px;
+  display: inline-flex;
+  vertical-align: middle;
 }
 
 .flex {
   display: flex;
+}
+
+.checkbox-container {
+  flex-direction: row;
+  align-items: center;
+}
+
+.subheader {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.bulleted-list li {
+  margin: 1rem;
+}
+
+.bulleted-list {
+  margin-left: 2rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.divider {
+  margin-top: 5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c7c7c75e;
+}
+
+.sidebarPreviewerContainer {
+  max-height: 100%;
+}
+
+.previewRow-Large {
+  background-color: #c7c7c7;
+  min-height: 45vh;
+  margin-top: 10px;
+}
+
+.previewRow-Small {
+  background-color: #c7c7c7;
+  min-height: 10vh;
+  margin-top: 10px;
+}
+
+.previewRowFooter-Large {
+  background-color: #c7c7c7;
+  min-height: 9vh;
+  margin-top: 10px;
+}
+
+.previewRowFooter-Small {
+  background-color: #c7c7c7;
+  min-height: 2vh;
+  margin-top: 10px;
+}
+
+.previewRowHeader-Large {
+  background-color: #c7c7c7;
+  min-height: 35vh;
+  margin-top: 10px;
+}
+
+.previewRowHeader-Small {
+  background-color: #c7c7c7;
+  min-height: 6.5vh;
+  margin-top: 10px;
+}
+
+.previewColumn-Large {
+  min-height: 45vh;
+  background-color: #c7c7c7;
+}
+
+.previewColumn-Small {
+  min-height: 10vh;
+  background-color: #c7c7c7;
 }
