@@ -1,25 +1,15 @@
-import Grid from '@mui/material/Grid';
-import React from 'react';
-import Previewer from './Components/Previewer';
-import SidebarBackgroundManager from './Components/SidebarBackgroundManager';
-import SidebarColumnManager from './Components/SidebarColumnManager';
+import React, { useState } from 'react';
+import { GlobalStore } from './GlobalState/StateContext';
 import './Styles/App.css';
+import Editor from './Workflows/Editor';
+import LayoutSelector from './Workflows/LayoutSelector';
 
 const App: React.FC = () => {
+    const [showEditor, setShowEditor] = useState(false);
     return (
-        <div className="app-container">
-            <Grid container spacing={2}>
-                <Grid item xs={2}>
-                    <SidebarBackgroundManager />
-                </Grid>
-                <Grid item xs={8}>
-                    <Previewer />
-                </Grid>
-                <Grid item xs={2}>
-                    <SidebarColumnManager />
-                </Grid>
-            </Grid>
-        </div>
+        <GlobalStore>
+            {showEditor ? <Editor setShowEditor={setShowEditor} /> : <LayoutSelector setShowEditor={setShowEditor} />}
+        </GlobalStore>
     );
 }
 

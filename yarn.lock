@@ -1478,6 +1478,13 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
+"@mui/icons-material@^5.6.1":
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.6.1.tgz#421e2b73992349abb07f8f03074d7e56e20bf7ba"
+  integrity sha512-I1x8u+FRLOmoJpRJASMx9UG+jZrSkNLyRQmBXivQQwXu3m3iasMoaKYhhI0J18t8+FWktbkNTp63oEUHE9Gw0Q==
+  dependencies:
+    "@babel/runtime" "^7.17.2"
+
 "@mui/material@^5.5.3":
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/@mui/material/-/material-5.6.0.tgz#284270f5e48d379a9b9bc4db412a807b807965b5"
@@ -2238,6 +2245,11 @@
   dependencies:
     "@typescript-eslint/types" "5.18.0"
     eslint-visitor-keys "^3.0.0"
+
+"@upload-io/upload-api-client-upload-js@1.13.0":
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/@upload-io/upload-api-client-upload-js/-/upload-api-client-upload-js-1.13.0.tgz#c829048b47bde547743b837668893b38b8aa8816"
+  integrity sha512-RPALUdB84on1dJ7v1J2Dk/OkT85yLLUmTvFWMVIC49/QsouwdSQNQi9kiGjjUXzvhG3PWcZsPVunaRyW3g1LqQ==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -3072,6 +3084,11 @@ cjs-module-lexer@^1.0.0:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz#9f84ba3244a512f3a54e5277e8eef4c489864e40"
   integrity sha512-cOU9usZw8/dXIXKtwa8pM0OTJQuJkxMN6w30csNRUerHfeQ5R6U3kkU/FtJeIf3M202OHfY2U8ccInBG7/xogA==
+
+classnames@^2.2.6:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
 
 clean-css@^5.2.2:
   version "5.3.0"
@@ -6993,6 +7010,11 @@ postcss@^8.3.5, postcss@^8.4.4, postcss@^8.4.6, postcss@^8.4.7:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+preact@^10.6.5:
+  version "10.7.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.7.1.tgz#bdd2b2dce91a5842c3b9b34dfe050e5401068c9e"
+  integrity sha512-MufnRFz39aIhs9AMFisonjzTud1PK1bY+jcJLo6m2T9Uh8AqjD77w11eAAawmjUogoGOnipECq7e/1RClIKsxg==
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"
@@ -7029,6 +7051,11 @@ process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
+
+progress-smoother@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/progress-smoother/-/progress-smoother-1.3.0.tgz#5dd982c17d9f194c34ce363aeff76fc48ae078f5"
+  integrity sha512-vWtKd8Q1pQXHJ6Fx4pa5fbSCj+p6BPKfWufCVmagOjNKc3JsNsMfgTF55yx8UE0mNnZlnbKHr20+M/imHsnNbQ==
 
 promise@^8.1.0:
   version "8.1.0"
@@ -7256,6 +7283,13 @@ react-transition-group@^4.4.2:
     dom-helpers "^5.0.1"
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
+
+react-uploader@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/react-uploader/-/react-uploader-1.6.0.tgz#7f1900c02983975dfffb4c7a82f0a26945fab4ca"
+  integrity sha512-QQVbpYt7THB5p0tZagcA0s7HtBoXxCcTBIRugidtg6M0WVh8+ukHZhpgnalaYYsoo0KaCFHpCexSoHZglsSUow==
+  dependencies:
+    uploader "^1.37.3"
 
 react@^17.0.2:
   version "17.0.2"
@@ -8367,6 +8401,23 @@ upath@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.2.0.tgz#8f66dbcd55a883acdae4408af8b035a5044c1894"
   integrity sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==
+
+upload-js@^1.44.3:
+  version "1.48.0"
+  resolved "https://registry.yarnpkg.com/upload-js/-/upload-js-1.48.0.tgz#4c41fd6255ccb797783b03b03a81932f681ac952"
+  integrity sha512-nU+0IWKyy2dzhMbovFl28C0IbIVd9ITMHf0Sxss8rKxxDooLJjGQbKcsQjOgkc7m0Oej1FaVWu3m/FUacSnEEg==
+  dependencies:
+    "@upload-io/upload-api-client-upload-js" "1.13.0"
+    progress-smoother "1.3.0"
+
+uploader@^1.37.3:
+  version "1.45.0"
+  resolved "https://registry.yarnpkg.com/uploader/-/uploader-1.45.0.tgz#7bda7b791181c4329ee03cf18527316128ceec78"
+  integrity sha512-RqCZF8dLUe3Fl12B83cpB3DDheDVwIHaRlsO09ldqezJdKyYu80wMJ6Nx6iRKzZJiV67DAvXSZSG4CedSvP/bQ==
+  dependencies:
+    classnames "^2.2.6"
+    preact "^10.6.5"
+    upload-js "^1.44.3"
 
 uri-js@^4.2.2:
   version "4.4.1"
