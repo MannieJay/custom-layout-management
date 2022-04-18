@@ -3,8 +3,9 @@ import { GlobalContext } from "./StateContext"
 
 const useGlobalState = () => {
     const [state, dispatch] = useContext(GlobalContext);
-    const globalStore = state;
+    const globalStore = {...state};
     const selectedCard = state?.selectedCard ? state.selectedCard : undefined;
+    const backgroundItemSelections = state?.backgroundItemSelections ? state.backgroundItemSelections : undefined;
 
     const setSelectedCard = useCallback((selectedCard: string) => {
         dispatch({type: 'SET_SELECTED_CARD', payload: selectedCard});
@@ -18,7 +19,8 @@ const useGlobalState = () => {
         globalStore,
         setSelectedCard,
         selectedCard,
-        setBackgroundItemSelected
+        setBackgroundItemSelected,
+        backgroundItemSelections
     };
 };
 

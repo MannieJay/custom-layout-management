@@ -7,10 +7,10 @@ import useGlobalState from '../GlobalState/useGlobalState';
 import WallpaperIcon from '@mui/icons-material/Wallpaper';
 
 interface Props {
-    setShowEditor: (showEditor: boolean) => void
+    setShowElement: (element: "LayoutSelector" | "Editor" | "Previewer") => void
 }
 
-const SidebarBackgroundManager: React.FC<Props> = ({ setShowEditor }) => {
+const SidebarBackgroundManager: React.FC<Props> = ({ setShowElement }) => {
     const { selectedCard, setBackgroundItemSelected } = useGlobalState();
 
     const labelMap = (card: string | undefined) => {
@@ -33,7 +33,7 @@ const SidebarBackgroundManager: React.FC<Props> = ({ setShowEditor }) => {
                     {labelMap(selectedCard)}
                 </div>
                 <div className="sidebarPreviewerContainer">
-                    <Previewer size="Small" layout={selectedCard} />
+                    <Previewer hidden={false} size="Small" layout={selectedCard} />
                 </div>
             </Stack>
         );
@@ -55,6 +55,10 @@ const SidebarBackgroundManager: React.FC<Props> = ({ setShowEditor }) => {
                     <div>
                         Background
                     </div>
+                </div>
+                <div className="flex checkbox-container">
+                    <Checkbox name="background" onChange={changeHandler}></Checkbox>
+                    {' Background'}
                 </div>
                 <div className="flex checkbox-container">
                     <Checkbox name="header" onChange={changeHandler}></Checkbox>
@@ -96,7 +100,7 @@ const SidebarBackgroundManager: React.FC<Props> = ({ setShowEditor }) => {
                 className="button-bottom"
                 variant="contained"
                 sx={{ borderRadius: 28, position: "absolute", bottom: "7vh", width: "10vw", left: "3vw" }}
-                onClick={() => setShowEditor(false)}
+                onClick={() => setShowElement("LayoutSelector")}
             >
                 Back
             </Button>

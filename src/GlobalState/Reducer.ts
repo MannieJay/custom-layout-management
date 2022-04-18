@@ -12,25 +12,20 @@ const actionMap: any = {
         value: boolean
     }}) => {
         const itemKey = action?.payload?.item;
-        if (state?.backgroundItemSelections?.[itemKey]) {
-            return {
-                ...state,
-                backgroundItemSelections: {
-                    ...state.backgroundItemSelections,
-                    [itemKey]: {
-                        ...state.backgroundItemSelections[itemKey],
-                        selected: action.payload.value
-                    }
+        return {
+            ...state,
+            backgroundItemSelections: {
+                ...state.backgroundItemSelections,
+                [itemKey]: {
+                    ...state?.backgroundItemSelections?.[itemKey],
+                    selected: action.payload.value
                 }
             }
-        } else {
-            return state;
         }
     }
 }
 
 const Reducer = (state: GlobalContextInterface, action: any) => {
-    console.log('reducer', action, state);
     if (action && action.type && actionMap[action.type]) {
         return actionMap[action.type](state, action);
     } else {
