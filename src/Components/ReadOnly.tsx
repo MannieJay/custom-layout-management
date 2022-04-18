@@ -1,3 +1,7 @@
+// source: https://codesandbox.io/s/tuhll?file=/src/RichEditor.js
+
+// TODO: correct any type deficiencies and remove "any" if exists
+
 import Box from "@mui/material/Box";
 import React, { useMemo, useCallback } from "react";
 import { createEditor } from "slate";

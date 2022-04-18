@@ -1,3 +1,7 @@
+// source: https://codesandbox.io/s/tuhll?file=/src/RichEditor.js
+
+// TODO: correct any type deficiencies and remove "any" if exists
+
 import React, { useCallback, useMemo } from "react";
 import { Editable, withReact, Slate, useSlate, ReactEditor } from "slate-react";
 import { BaseEditor, createEditor, Editor, Transforms } from "slate";
