@@ -1,27 +1,35 @@
 import Grid from '@mui/material/Grid';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Previewer from '../Components/Previewer';
 import SidebarBackgroundManager from '../Components/SidebarBackgroundManager';
 import SidebarColumnManager from '../Components/SidebarColumnManager';
 import useGlobalState from '../GlobalState/useGlobalState';
 
 interface Props {
-    setShowEditor: (showEditor: boolean) => void
+    setShowElement: (element: "LayoutSelector" | "Editor" | "Previewer") => void
+    setLayout: (layout: "TwoColumn" | "ThreeColumn" | "TwoColumnFooter") => void
+    hidden: boolean
 }
 
-const Editor: React.FC<Props> = ({ setShowEditor }) => {
+const Editor: React.FC<Props> = ({ setShowElement, hidden, setLayout }) => {
     const { selectedCard } = useGlobalState();
+    const newClassName = hidden ? "app-container hide" : "app-container";
+    useEffect(() => {
+        if (selectedCard) {
+            setLayout(selectedCard);
+        }
+    });
     return (        
-        <div className="app-container">
+        <div className={newClassName}>
             <Grid container spacing={2}>
                 <Grid item xs={2}>
-                    <SidebarBackgroundManager setShowEditor={setShowEditor} />
+                    <SidebarBackgroundManager setShowElement={setShowElement} />
                 </Grid>
                 <Grid item xs={8}>
-                    <Previewer size="Large" layout={selectedCard}/>
+                    <Previewer hidden={false} size="Large" layout={selectedCard} />
                 </Grid>
                 <Grid item xs={2}>
-                    <SidebarColumnManager />
+                    <SidebarColumnManager setShowElement={setShowElement} />
                 </Grid>
             </Grid>
         </div>

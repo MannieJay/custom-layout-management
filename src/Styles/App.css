@@ -60,6 +60,12 @@
   max-height: 100%;
 }
 
+.previewRow-Full {
+  background-color: #c7c7c7;
+  min-height: 45vh;
+  margin-top: 10px;
+}
+
 .previewRow-Large {
   background-color: #c7c7c7;
   min-height: 45vh;
@@ -69,6 +75,12 @@
 .previewRow-Small {
   background-color: #c7c7c7;
   min-height: 10vh;
+  margin-top: 10px;
+}
+
+.previewRowFooter-Full {
+  background-color: #c7c7c7;
+  min-height: 9vh;
   margin-top: 10px;
 }
 
@@ -84,6 +96,12 @@
   margin-top: 10px;
 }
 
+.previewRowHeader-Full {
+  background-color: #c7c7c7;
+  min-height: 35vh;
+  margin-top: 10px;
+}
+
 .previewRowHeader-Large {
   background-color: #c7c7c7;
   min-height: 35vh;
@@ -96,6 +114,11 @@
   margin-top: 10px;
 }
 
+.previewColumn-Full {
+  min-height: 45vh;
+  background-color: #c7c7c7;
+}
+
 .previewColumn-Large {
   min-height: 45vh;
   background-color: #c7c7c7;
@@ -104,4 +127,12 @@
 .previewColumn-Small {
   min-height: 10vh;
   background-color: #c7c7c7;
+}
+
+.hide {
+  display: none;
+}
+
+.rdw-editor-main {
+  overflow: hidden;
 }

@@ -1,8 +1,8 @@
 import React, { createContext, Dispatch, useReducer } from 'react';
 import Reducer from './Reducer';
 import { GlobalContextInterface } from '../types';
-const initialState = {
-    selectedCard: '',
+const initialState: GlobalContextInterface = {
+    selectedCard: undefined,
     backgroundItemSelections: {
         header: {
             selected: false
@@ -17,6 +17,9 @@ const initialState = {
             selected: false
         },
         footer: {
+            selected: false
+        },
+        background: {
             selected: false
         }
     }

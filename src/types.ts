@@ -19,5 +19,8 @@ export interface BackgroundItemSelections {
     },
     footer: {
         selected: boolean
+    },
+    background: {
+        selected: boolean
     }
 }

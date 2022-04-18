@@ -7,20 +7,21 @@ import Previewer from '../Components/Previewer';
 import useGlobalState from '../GlobalState/useGlobalState';
 
 interface Props {
-    setShowEditor: (showEditor: boolean) => void
+    setShowElement: (element: "LayoutSelector" | "Editor" | "Previewer") => void
+    hidden: boolean
 }
 
-const LayoutSelector: React.FC<Props> = ({ setShowEditor }) => {
+const LayoutSelector: React.FC<Props> = ({ setShowElement, hidden }) => {
     const [currentCard, setCurrentCard] = useState('');
     const { setSelectedCard } = useGlobalState();
-    
+    const newClassName = hidden ? "app-container hide" : "app-container";
     const onSelectCard = (card: string) => {
         setSelectedCard(card);
         setCurrentCard(card);
     };
     
-    return (        
-        <div className="app-container">
+    return (
+        <div className={newClassName}>
             <Grid container spacing={2}>
                 <Grid item xs={1.5}>
                 </Grid>
@@ -57,7 +58,7 @@ const LayoutSelector: React.FC<Props> = ({ setShowEditor }) => {
                     >
                         <Card sx={{backgroundColor: "#e2dfdf", paddingRight: "2rem", paddingLeft: "2rem"}}>
                             <CardContent>
-                                <Previewer size="Small" layout="TwoColumn"/>
+                                <Previewer hidden={false} size="Small" layout="TwoColumn"/>
                             </CardContent>
                         </Card>
                         <CardContent>
@@ -75,7 +76,7 @@ const LayoutSelector: React.FC<Props> = ({ setShowEditor }) => {
                     >
                         <Card sx={{backgroundColor: "#e2dfdf", paddingRight: "2rem", paddingLeft: "2rem"}}>
                             <CardContent>
-                                <Previewer size="Small" layout="ThreeColumn" />
+                                <Previewer hidden={false} size="Small" layout="ThreeColumn" />
                             </CardContent>
                         </Card>
                         <CardContent>
@@ -93,7 +94,7 @@ const LayoutSelector: React.FC<Props> = ({ setShowEditor }) => {
                     >
                         <Card sx={{backgroundColor: "#e2dfdf", paddingRight: "2rem", paddingLeft: "2rem"}}>
                             <CardContent>
-                                <Previewer size="Small" layout="TwoColumnFooter" />
+                                <Previewer hidden={false} size="Small" layout="TwoColumnFooter" />
                             </CardContent>
                         </Card>
                         <CardContent>
@@ -118,7 +119,7 @@ const LayoutSelector: React.FC<Props> = ({ setShowEditor }) => {
                         variant="contained"
                         sx={{ borderRadius: 28 }}
                         disabled={!currentCard.length}
-                        onClick={() => setShowEditor(true)}
+                        onClick={() => setShowElement("Editor")}
                     >
                         Next
                     </Button>
